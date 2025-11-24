@@ -1,6 +1,6 @@
 {
     "name": "render-peek",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A lightweight React Hook for visually detecting unnecessary re-renders",
     "main": "./dist/useRenderPeek.js",
     "module": "./dist/useRenderPeek.mjs",
@@ -17,14 +17,18 @@
         "render",
         "debug"
     ],
+    "homepage": "https://github.com/chevgan/render-peek#readme",
+    "bugs": {
+        "url": "https://github.com/chevgan/render-peek/issues"
+    },
     "files": [
         "dist"
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/chevgan/render-peek.git"
+        "url": "https://github.com/chevgan/render-peek.git"
     },
-    "author": "",
+    "author": "Danil Chevgan",
     "license": "MIT",
     "peerDependencies": {
         "react": ">=18",
