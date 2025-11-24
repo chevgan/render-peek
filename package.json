@@ -1,0 +1,39 @@
+{
+    "name": "render-peek",
+    "version": "1.0.0",
+    "description": "A lightweight React Hook for visually detecting unnecessary re-renders",
+    "main": "./dist/useRenderPeek.js",
+    "module": "./dist/useRenderPeek.mjs",
+    "types": "./dist/useRenderPeek.d.ts",
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "lint": "tsc"
+    },
+    "keywords": [
+        "react",
+        "hook",
+        "performance",
+        "render",
+        "debug"
+    ],
+    "files": [
+        "dist"
+    ],
+    "author": "",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+    },
+    "dependencies": {
+        "fast-deep-equal": "^3.1.3"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0"
+    }
+}
