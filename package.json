@@ -20,6 +20,10 @@
     "files": [
         "dist"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chevgan/render-peek.git"
+    },
     "author": "",
     "license": "MIT",
     "peerDependencies": {
