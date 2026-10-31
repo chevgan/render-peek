@@ -8,7 +8,8 @@
     "scripts": {
         "build": "tsup",
         "dev": "tsup --watch",
-        "lint": "tsc"
+        "lint": "tsc",
+        "prepublishOnly": "npm run build"
     },
     "keywords": [
         "react",
