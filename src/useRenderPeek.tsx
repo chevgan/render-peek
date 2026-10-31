@@ -1,5 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
-import equal from 'fast-deep-equal';
+// The React build skips elements' _owner: it links to fibers with cycles,
+// so comparing JSX children with the plain build overflows the stack.
+import equal from 'fast-deep-equal/react.js';
 import { injectStyles } from './utils/injectStyles';
 
 export interface RenderPeekOptions<P> {
@@ -31,6 +33,12 @@ export function useRenderPeek<P extends object>(
     // An unnecessary render changes nothing in the DOM, so a second render is needed
     // to show the flash anyway.
     useEffect(() => {
+        // A render caused by this component's own state keeps the same props object.
+        // Comparing it with itself would flash again on every reset, forever.
+        if (prevPropsRef.current === props) {
+            return;
+        }
+
         const currentFiltered = getFilteredProps(props);
 
         if (prevPropsRef.current) {
